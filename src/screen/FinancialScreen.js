@@ -6,6 +6,10 @@ import { ScrollView } from "react-native-gesture-handler";
 
 const FinancialScreen = ({ navigation, data }) => {
   // console.log("da",data);
+  // if (data) {
+  //   return <View/>
+  // }
+
   return (
     <View style={{ flex: 1 }}>
       <ScrollView style={{ flex: 1 }}>
@@ -58,17 +62,17 @@ const FinancialScreen = ({ navigation, data }) => {
               {data?.data?.map((item) => {
                 if (!item.maPhi) return null;
                 return (
-                  <View style={{ margin: 20, marginBottom: 10,padding:10,backgroundColor:"rgba(255,255,255,.2)" ,borderRadius:12 }}>
-                    <Text style={{fontSize:15,fontWeight:"600"}}>{item.tenPhi}</Text>
+                  <View key={item.maPhi} style={{ margin: 20, marginBottom: 10, padding: 10, backgroundColor: "rgba(255,255,255,.2)", borderRadius: 12 }}>
+                    <Text style={{ fontSize: 15, fontWeight: "600" }}>{item.tenPhi}</Text>
                     <View>
                       <Text>Mã phí : {item.maPhi}</Text>
                       <Text>Phải đóng : {item.phaiDong || 0}</Text>
-                      <Text>Cán trừ : {data.canTru || 0}</Text>
-                      <Text>Miễn Giảm : {data.mienGiam || 0}</Text>
-                      <Text>Còn nợ : {data.conNo || 0}</Text>
-                      <Text>Ngày đóng : {data.ngayDong || "---"}</Text>
+                      {/* <Text>Cán trừ : {data.canTru || 0}</Text> */}
+                      {/* <Text>Miễn Giảm : {data.mienGiam || 0}</Text> */}
+                      {/* <Text>Còn nợ : {data.conNo || 0}</Text> */}
+                      {/* <Text>Ngày đóng : {data.ngayDong || "---"}</Text>
                       <Text>Số phiếu thu : {data.soPhieuThu || 0}</Text>
-                      <Text>Tỉ lệ giảm : {data.tiLeGiam || 0}</Text>
+                      <Text>Tỉ lệ giảm : {data.tiLeGiam || 0}</Text> */}
                     </View>
                   </View>
                 );

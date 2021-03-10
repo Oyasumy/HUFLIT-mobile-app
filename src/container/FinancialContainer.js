@@ -10,7 +10,7 @@ import FinancialScreen from "../screen/FinancialScreen";
 const FinancialContainer = ({ navigation, financial, cookie, actionLoad, actionSet }) => {
   var { handleSetLoading, handleSetShowAlert } = actionLoad;
 
-  console.log("financial", financial);
+  // console.log("financial", financial);
 
   useEffect(() => {
     if (financial?.data?.length > 0) return;
