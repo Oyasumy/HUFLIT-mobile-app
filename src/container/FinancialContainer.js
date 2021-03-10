@@ -12,6 +12,7 @@ const FinancialContainer = ({ navigation, financial, cookie, actionLoad, actionS
 
   // console.log("financial", financial);
 
+  // console.log("new commit");
   useEffect(() => {
     if (financial?.data?.length > 0) return;
 
